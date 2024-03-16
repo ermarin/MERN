@@ -1,0 +1,6 @@
+[submodule "module_1/back"]
+	path = module_1/back
+	url = https://github.com/ermarin/MERN/module_1
+[submodule "module_1/front"]
+	path = module_1/front
+	url = https://github.com/ermarin/MERN/module_1
