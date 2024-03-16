@@ -11,6 +11,12 @@ router.get('/', (req, res) => {
     .catch(err => res.status(404).json({ nocouchesfound: 'No couch found' }));
 });
 
+router.get('/:id', (req, res) => {
+  Couch.findById(req.params.id)
+    .then(couch => res.json(couch))
+    .catch(err => res.status(404).json({ bocouchfound: 'No Couch found' }));
+});
+
 router.post('/', (req, res) => {
   Couch.create(req.body)
     .then(couch => res.json({ msg: 'Couch added successfully' }))
